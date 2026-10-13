@@ -4,13 +4,21 @@ public class ShoppingCart {
     private List<CartItem> items = new ArrayList<>();
 
     public void addProduct(Product product, int quantity) {
-        for (CartItem item : items) {
+        if (product == null) {
+            throw new IllegalArgumentException("Product is required.");
+        }
+        if (quantity <= 0) {
+            throw new IllegalArgumentException("Quantity must be greater than zero.");
+        }
+
+        for (int i = 0; i < items.size(); i++) {
+            CartItem item = items.get(i);
             if (item.getProduct().getId() == product.getId()) {
-                items.remove(item);
-                items.add(new CartItem(product, item.getQuantity() + quantity));
+                items.set(i, new CartItem(product, item.getQuantity() + quantity));
                 return;
             }
         }
+
         items.add(new CartItem(product, quantity));
     }
 
