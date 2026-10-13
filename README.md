@@ -40,7 +40,6 @@ The application will print a menu in the terminal. Choose option 5 to exit.
 
 ## Future Improvements
 
-- Reject zero and negative quantities.
 - Handle non-numeric console input without terminating the application.
 - Add unit tests and a build tool such as Maven.
 - Persist orders and products if the project is expanded beyond a console exercise.
