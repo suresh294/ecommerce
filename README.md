@@ -1,5 +1,7 @@
 # Mini E-Commerce System — Java Console App
 
+[![CI](https://github.com/suresh294/ecommerce/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/suresh294/ecommerce/actions/workflows/ci.yml)
+
 A small Java console application demonstrating basic object-oriented programming, product listing, shopping-cart operations, quantity tracking, total calculation, and checkout.
 
 ## Features
